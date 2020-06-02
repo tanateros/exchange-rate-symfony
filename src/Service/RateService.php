@@ -9,6 +9,8 @@ use App\ValueObject\Currency;
 
 class RateService
 {
+    public const DEFAULT_AMOUNT = 1.0;
+
     /**
      * @var RateRepository
      */
@@ -39,7 +41,7 @@ class RateService
     public function getRate(Currency $from, Currency $to, ?float $fromAmount): float
     {
         if (null === $fromAmount) {
-            $fromAmount = 1;
+            $fromAmount = self::DEFAULT_AMOUNT;
         }
 
         /** @var Rate|null $rate */

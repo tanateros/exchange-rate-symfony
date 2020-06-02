@@ -42,9 +42,8 @@ Response (JSON):
 
 Exceptions: if bad request may be logic exceptions.
 
-TODO
+Tests
 =
-- api docs in Swagger
-- tests: integration, unit. Test docs
-- consider use Form/SearchRateType
-- add logs when parsing
+```
+./bin/phpunit
+```
